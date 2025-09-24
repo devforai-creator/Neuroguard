@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>YT Clean Mind 설정</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main>
+      <h1>YT Clean Mind 설정</h1>
+
+      <section>
+        <h2>키워드 필터</h2>
+        <p>갈등 유발 키워드를 줄바꿈으로 구분해 입력하세요.</p>
+        <textarea id="keywords" rows="10"></textarea>
+      </section>
+
+      <section>
+        <h2>클릭 지연</h2>
+        <label>
+          지연 시간 (초)
+          <input id="delay" type="number" min="0" step="1" />
+        </label>
+      </section>
+
+      <section>
+        <h2>홈 피드 비우기</h2>
+        <label>
+          <input id="hideHome" type="checkbox" /> 홈 추천 숨기기
+        </label>
+      </section>
+
+      <section>
+        <h2>오늘의 기록</h2>
+        <p id="log-summary">기록이 아직 없어요.</p>
+        <button id="export">JSON 내보내기</button>
+        <button id="clearLogs">로그 초기화</button>
+      </section>
+
+      <footer>
+        <button id="save">저장</button>
+        <span id="status" role="status" aria-live="polite"></span>
+      </footer>
+    </main>
+
+    <script src="options.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "YT Clean Mind",
+  "version": "0.1.0",
+  "description": "무의식 클릭을 3초 멈추고, 갈등 키워드 추천을 무해화합니다.",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "*://www.youtube.com/*",
+    "*://m.youtube.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["content.js"],
+      "css": ["blocker.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "service_worker.js"
+  },
+  "options_page": "options.html",
+  "action": {
+    "default_title": "YT Clean Mind"
+  }
+}
